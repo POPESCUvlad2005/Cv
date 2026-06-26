@@ -1,0 +1,171 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[left=2cm, right=2cm, top=1.7cm, bottom=1.7cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[protrusion=false]{microtype}
+\usepackage{setspace}
+\usepackage{mdframed}
+\usepackage{letterspace}
+\usepackage{paracol}
+
+% ── Palette ──────────────────────────────────────────────────────────────────
+\definecolor{ink}{RGB}{18, 22, 34}
+\definecolor{navy}{RGB}{28, 48, 82}
+\definecolor{gold}{RGB}{180, 148, 86}
+\definecolor{rule}{RGB}{200, 185, 155}
+\definecolor{body}{RGB}{48, 52, 64}
+\definecolor{sub}{RGB}{110, 115, 130}
+
+% ── Hyperlinks ───────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true, urlcolor=navy, linkcolor=navy}
+\pagestyle{empty}
+
+% ── Section heading (works inside minipage) ───────────────────────────────────
+\newcommand{\cvsection}[1]{%
+  \vspace{2pt}%
+  \noindent{\small\bfseries\color{navy}\scshape\textls[90]{#1}}%
+  \vspace{3pt}\\[-4pt]
+  {\color{rule}\rule{\linewidth}{0.5pt}}%
+  \vspace{5pt}
+}
+
+% ── Bullet style ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.1em, itemsep=2pt, topsep=2pt, parsep=0pt,
+  label={\color{gold}\tiny\raisebox{1pt}{\textbullet}}
+}
+
+% ── Project entry ─────────────────────────────────────────────────────────────
+\newcommand{\project}[3]{%
+  \noindent{\color{navy}\textbf{#1}}%
+  \hfill{\small\color{sub}\texttt{#2}}\\[3pt]
+  #3\vspace{5pt}%
+}
+
+\begin{document}
+\color{body}
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  MASTHEAD
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{center}
+  {\color{gold}\rule{1.8cm}{0.5pt}}%
+  \enspace{\fontsize{8}{10}\selectfont\color{sub}\scshape\textls[150]{curriculum vit\ae}}\enspace%
+  {\color{gold}\rule{1.8cm}{0.5pt}}
+
+  \vspace{6pt}
+
+  {\fontsize{29}{33}\selectfont
+    \textbf{\textsc{\color{navy}Popescu}}%
+    \,{\mdseries\color{ink}Vlad-Daniel}}
+
+  \vspace{6pt}
+
+  {\small\color{sub}
+    \faPhone\ \texttt{+40\,786\,207\,025}%
+    \enspace{\color{rule}|}\enspace
+    \faEnvelope\ \href{mailto:vladpopescu321@gmail.com}{\texttt{vladpopescu321@gmail.com}}%
+    \enspace{\color{rule}|}\enspace
+    \faMapMarker*\ Bucharest, Romania%
+    \enspace{\color{rule}|}\enspace
+    \faGithub\ \href{https://github.com/POPESCUvlad2005}{\texttt{github.com/POPESCUvlad2005}}%
+    \enspace{\color{rule}|}\enspace
+    \faGitlab\ \href{https://gitlab.cs.pub.ro/vlad\_daniel.popescu}{\texttt{gitlab.cs.pub.ro/vlad\_daniel.popescu}}%
+  }
+
+  \vspace{6pt}
+  {\color{gold}\rule{\linewidth}{0.8pt}}\\[-1pt]
+  {\color{rule}\rule{\linewidth}{0.3pt}}
+\end{center}
+
+\vspace{6pt}
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  TWO-COLUMN BODY
+% ══════════════════════════════════════════════════════════════════════════════
+\columnratio{0.29}
+\setlength{\columnsep}{0.055\linewidth}
+\begin{paracol}{2}
+
+% ── LEFT sidebar ─────────────────────────────────────────────────────────────
+
+\cvsection{Education}
+
+\noindent{\textbf{\color{navy}POLITEHNICA Bucharest}}\\[2pt]
+{\small\color{sub}Sept 2024 — Present}\\[3pt]
+{\small B.Sc.\ in Computer Science (ACS CTI)}\\[5pt]
+{\small\color{sub}\scshape\textls[50]{Relevant Coursework}}\\[3pt]
+{\small Algorithm Analysis, Data Structures, Java, Scala, Functional Programming, Computer Networks, Communication Protocols, Operating Systems, Assembly Language \& Computer Architecture}
+
+\vspace{28pt}
+
+\noindent\textbf{\color{navy}Tudor Vladimirescu}\\
+\textbf{\color{navy}National College}\\[2pt]
+{\small\color{sub}2020 — 2024}\\[5pt]
+{\small Baccalaureate: \textbf{10\,/\,10} in Physics; outstanding results across all subjects.}
+
+\vspace{36pt}
+
+\cvsection{Skills}
+
+\noindent{\small\textbf{Languages:}} {\small C, C++, Bash, Java, Scala, Python, JavaScript, Haskell, x86 Assembly, MATLAB}\\[17pt]
+{\small\textbf{Build \& Debug Tools:}} {\small GCC, Makefile, Valgrind, GDB, Maven}\\[17pt]
+{\small\textbf{Developer Tools:}} {\small Git, GitHub, VS Code, Linux, Remote Access Tools}\\[17pt]
+{\small\textbf{Concepts:}} {\small Memory Management, Systems Programming, Unikernel Architecture, Compiler Design, Data Structures \& Algorithms}\\[17pt]
+{\small\textbf{Scripting \& Automation:}} {\small Bash scripting, CLI tool development}
+
+\switchcolumn
+% ── RIGHT column ─────────────────────────────────────────────────────────────
+
+\cvsection{Experience}
+
+\noindent Actively participated in numerous workshops and hackathons, gaining hands-on experience in competitive and collaborative environments.
+
+\vspace{5pt}
+
+\noindent{\color{navy}\textbf{Google Student AI Hackathon}}
+\hfill{\footnotesize\color{sub}2026 · Bucharest}\\[2pt]
+\textbf{\color{gold}3\textsuperscript{rd} Place} — Competed among top student teams in a Google-organised AI challenge, delivering an innovative solution under time constraints.
+
+\vspace{5pt}
+
+\cvsection{Personal Projects}
+
+\project{TicketHub}{Java, Git, GitHub, IntelliJ IDEA, Linux}{%
+\begin{itemize}
+  \item \textbf{Software Architecture:} Implemented the Builder, Strategy, Factory, and State patterns to manage complex ticket lifecycles and enable intelligent resource allocation.
+  \item \textbf{Resource Management:} Developed a filtering engine to match developers to tasks based on expertise, seniority, and availability.
+  \item \textbf{Access Control:} Integrated a role-based permission system (Manager, Developer, Reporter) with secure data persistence in JSON format.
+  \item \textbf{Code Quality:} 100\,\% compliance with Clean Code standards and rigorous input validation.
+\end{itemize}}
+
+\project{PoliTCP}{C++, C, Make, Git, GitHub, Linux}{%
+\begin{itemize}
+  \item \textbf{Protocol Design:} Custom reliable transport protocol over raw UDP sockets, replicating core TCP mechanisms (sliding window, flow control, ordered delivery) at the application layer via the POSIX API.
+  \item \textbf{Flow Control:} Bidirectional sliding window on both sender and receiver sides, with BDP-aware window sizing to maximise link utilisation.
+  \item \textbf{Reliability:} Guaranteed in-order, duplicate-free delivery through cumulative ACKs, retransmission logic, and out-of-order segment buffering.
+  \item \textbf{Concurrency:} Background POSIX threads handle ACK processing and retransmissions independently, protected by per-connection mutexes.
+\end{itemize}}
+
+\project{Chaos Court}{JavaScript, CSS, Node.js, Git, GitHub}{%
+\begin{itemize}
+  \item \textbf{Origin:} Built at the 2026 Google Student AI Hackathon (Bucharest) — \textbf{\color{gold}3\textsuperscript{rd} place} — with further features added post-competition.
+  \item \textbf{Concept:} Multiplayer debate game where players argue for or against an absurd statement before an AI judge that adopts randomised personas (1800s wizard, astronaut, etc.) and delivers a ruling.
+  \item \textbf{AI Integration:} LLM evaluates arguments in real time and generates an image based on the verdict; supports text and voice input.
+  \item \textbf{Stack:} Full-stack JavaScript with a Node.js backend, deployed on Google Cloud.
+\end{itemize}}
+
+\end{paracol}
+
+% ── Footer double rule ────────────────────────────────────────────────────────
+
+\noindent{\color{rule}\rule{\linewidth}{0.3pt}}\\[-2pt]
+\noindent{\color{gold}\rule{\linewidth}{0.6pt}}
+
+\end{document}
